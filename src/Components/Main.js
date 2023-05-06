@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import CarModal from "./CarModal";
 
 class Main extends Component {
   constructor(props) {
     super();
     this.state = {
       cars: [],
+      modalVisibility: false,
     };
   }
 
@@ -39,10 +41,26 @@ class Main extends Component {
     });
   };
 
+  openCarModal = () => {
+    this.setState({
+      modalVisibility: true,
+    });
+  };
+
+  closeCarModal = () => {
+    this.setState({
+      modalVisibility: false,
+    });
+  };
+
   render() {
-    const { cars } = this.state;
+    const { cars, modalVisibility } = this.state;
     return (
       <main className="container">
+        <button className="btn btn-primary mb-2" onClick={this.openCarModal}>
+          Add a car
+        </button>
+        {modalVisibility ? <CarModal closeCarModal={this.closeCarModal} /> : ""}
         <table className="table table-primary">
           <thead>
             <tr>
