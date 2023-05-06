@@ -15,17 +15,35 @@ class Main extends Component {
         guilt: "Havfsizlik kamari",
         date: "5/6/2023",
       },
+      {
+        carNumber: "01 D555 AA",
+        guilt: "Havfsizlik kamari",
+        date: "5/6/2023",
+      },
+      {
+        carNumber: "01 D555 AA",
+        guilt: "Havfsizlik kamari",
+        date: "5/6/2023",
+      },
     ];
     this.setState({
       cars,
     });
   }
 
+  deleteCar = (index) => {
+    const { cars } = this.state;
+    cars.splice(index, 1);
+    this.setState({
+      cars,
+    });
+  };
+
   render() {
     const { cars } = this.state;
     return (
       <main className="container">
-        <table class="table table-primary">
+        <table className="table table-primary">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -37,13 +55,18 @@ class Main extends Component {
           </thead>
           <tbody>
             {cars.map((item, index) => (
-              <tr key="index">
+              <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{item.carNumber}</td>
                 <td>{item.guilt}</td>
                 <td>{item.date}</td>
                 <td>
-                  <button className="btn btn-danger btn-sm">Delete</button>
+                  <button
+                    className="btn btn-danger btn-sm"
+                    onClick={() => this.deleteCar(index)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
