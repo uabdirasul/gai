@@ -55,8 +55,12 @@ class Main extends Component {
 
   saveChanges = (carNumber, guilt, date) => {
     const { cars } = this.state;
-    cars.push({ carNumber, guilt, date });
-    this.setState({ cars });
+    if (carNumber && guilt && date) {
+      cars.push({ carNumber, guilt, date });
+      this.setState({ cars });
+    } else {
+      alert("Fill the blank");
+    }
   };
 
   render() {
