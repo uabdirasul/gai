@@ -12,28 +12,28 @@ class CarModal extends Component {
         <div className="card-body">
           <div className="row">
             <form>
-              <div class="form-group">
-                <label for="carNumber">Mashina raqami</label>
+              <div className="form-group">
+                <label htmlFor="carNumber">Mashina raqami</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="carNumber"
                   aria-describedby="emailHelp"
                   placeholder="Mashinda raqami"
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="guilt">Aybi</label>
+              <div className="form-group">
+                <label htmlFor="guilt">Aybi</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="guilt"
                   placeholder="Aybi"
                 />
               </div>
               <div className="form-group">
-                <label for="date">Sanasi</label>
+                <label htmlFor="date">Sanasi</label>
                 <input type="date" className="form-control" id="date" />
               </div>
             </form>
