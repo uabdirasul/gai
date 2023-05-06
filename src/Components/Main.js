@@ -53,6 +53,12 @@ class Main extends Component {
     });
   };
 
+  saveChanges = (carNumber, guilt, date) => {
+    const { cars } = this.state;
+    cars.push({ carNumber, guilt, date });
+    this.setState({ cars });
+  };
+
   render() {
     const { cars, modalVisibility } = this.state;
     return (
@@ -60,7 +66,14 @@ class Main extends Component {
         <button className="btn btn-primary mb-2" onClick={this.openCarModal}>
           Add a car
         </button>
-        {modalVisibility ? <CarModal closeCarModal={this.closeCarModal} /> : ""}
+        {modalVisibility ? (
+          <CarModal
+            closeCarModal={this.closeCarModal}
+            saveChanges={this.saveChanges}
+          />
+        ) : (
+          ""
+        )}
         <table className="table table-primary">
           <thead>
             <tr>
