@@ -14,18 +14,18 @@ class Main extends Component {
     const cars = [
       {
         carNumber: "01 D555 AA",
-        guilt: "Havfsizlik kamari",
-        date: "5/6/2023",
+        guilt: "Havfsizlik kamari taqilmagan",
+        date: "2023-5-6",
       },
       {
         carNumber: "01 D555 AA",
-        guilt: "Havfsizlik kamari",
-        date: "5/6/2023",
+        guilt: "Haydovchilik guvohnomasi yo'q",
+        date: "2023-3-6",
       },
       {
         carNumber: "01 D555 AA",
-        guilt: "Havfsizlik kamari",
-        date: "5/6/2023",
+        guilt: "Svetafor qizil paytda yurib ketgan",
+        date: "1/6/2023",
       },
     ];
     this.setState({
