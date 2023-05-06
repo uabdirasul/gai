@@ -57,7 +57,7 @@ class Main extends Component {
     const { cars } = this.state;
     if (carNumber && guilt && date) {
       cars.push({ carNumber, guilt, date });
-      this.setState({ cars });
+      this.setState({ cars, modalVisibility: false });
     } else {
       alert("Fill the blank");
     }
