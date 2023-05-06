@@ -18,14 +18,14 @@ class Main extends Component {
         date: "2023-5-6",
       },
       {
-        carNumber: "01 D555 AA",
+        carNumber: "03 E135 JI",
         guilt: "Haydovchilik guvohnomasi yo'q",
         date: "2023-3-6",
       },
       {
-        carNumber: "01 D555 AA",
+        carNumber: "94 D253 GE",
         guilt: "Svetafor qizil paytda yurib ketgan",
-        date: "1/6/2023",
+        date: "2023-1-6",
       },
     ];
     this.setState({
