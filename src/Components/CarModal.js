@@ -11,11 +11,10 @@ class CarModal extends Component {
   }
 
   handleChange = (event) => {
-    const { id, value } = event.target;
-    this.setState((prevState) => ({
-      ...prevState,
-      [id]: value,
-    }));
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
   };
 
   render() {
@@ -36,10 +35,12 @@ class CarModal extends Component {
                   type="text"
                   className="form-control"
                   id="carNumber"
+                  name="carNumber"
                   aria-describedby="emailHelp"
                   placeholder="Mashinda raqami"
                   required
                   onChange={this.handleChange}
+                  autoComplete="off"
                 />
               </div>
               <div className="form-group">
@@ -48,8 +49,10 @@ class CarModal extends Component {
                   type="text"
                   className="form-control"
                   id="guilt"
+                  name="guilt"
                   placeholder="Aybi"
                   onChange={this.handleChange}
+                  autoComplete="off"
                 />
               </div>
               <div className="form-group">
@@ -58,6 +61,7 @@ class CarModal extends Component {
                   type="date"
                   className="form-control"
                   id="date"
+                  name="date"
                   onChange={this.handleChange}
                 />
               </div>
